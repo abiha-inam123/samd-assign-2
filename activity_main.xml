@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/text"
+        android:layout_width="385dp"
+        android:layout_height="79dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="457dp"
+        android:ems="10"
+        android:hint="enter text here"
+        android:textAlignment="center"
+        android:textSize="20dp" />
+
+
+    <Spinner
+        android:id="@+id/fontstyle"
+        android:layout_width="219dp"
+        android:layout_height="41dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginBottom="379dp"
+        android:entries="@array/font"
+        android:textAlignment="center"
+        android:textSize="20dp" />
+
+    <Spinner
+        android:id="@+id/fontcolor"
+        android:layout_width="215dp"
+        android:layout_height="46dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:entries="@array/color"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="98dp"
+        android:layout_marginEnd="97dp"
+        android:layout_marginBottom="298dp"
+        android:textAlignment="center"
+        android:textSize="20dp" />
+
+    <CheckBox
+        android:id="@+id/bold"
+        android:layout_width="112dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="221dp"
+        android:layout_marginBottom="209dp"
+        android:text="Bold"
+        android:textSize="20dp" />
+
+    <CheckBox
+        android:id="@+id/italic"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="78dp"
+        android:layout_marginBottom="207dp"
+        android:text="Italic"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/btnshow"
+        android:layout_width="336dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="122dp"
+        android:text="Show formatted text"
+        android:textAlignment="center"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/result"
+        android:layout_width="380dp"
+        android:layout_height="64dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="51dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textSize="20dp" />
+
+</RelativeLayout>

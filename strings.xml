@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">samd assign2</string>
+    <string-array name="font">
+        <item>epimodem</item>
+        <item>arial</item>
+        <item>calibri</item>
+        <item>lobster</item>
+    </string-array>
+    <string-array name="color">
+        <item>Black</item>
+        <item>Red</item>
+        <item>Cyan</item>
+        <item>Green</item>
+    </string-array>
+</resources>
