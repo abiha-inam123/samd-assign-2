@@ -1,10 +1,10 @@
 <resources>
-    <string name="app_name">samd assign2</string>
+    <string name="app_name">samd assign 2</string>
     <string-array name="font">
-        <item>epimodem</item>
-        <item>arial</item>
-        <item>calibri</item>
-        <item>lobster</item>
+        <item>Admiration Pains</item>
+        <item>Playfair Display</item>
+        <item>Remachine Script</item>
+        <item>Walto Graph</item>
     </string-array>
     <string-array name="color">
         <item>Black</item>
@@ -12,4 +12,5 @@
         <item>Cyan</item>
         <item>Green</item>
     </string-array>
+</resources>-array>
 </resources>
