@@ -1,4 +1,5 @@
 package com.example.samdassign2;
+
 import static android.graphics.Typeface.createFromAsset;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,7 +19,6 @@ import android.widget.Toast;
 import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,26 +29,31 @@ public class MainActivity extends AppCompatActivity {
         Spinner spcolor = (Spinner) findViewById(R.id.fontcolor);
         CheckBox cbbold=(CheckBox) findViewById(R.id.bold);
         CheckBox cbitalic=(CheckBox) findViewById(R.id.italic);
-        Button show_btn = findViewById(R.id.btnshow);
+        Button show_btn = (Button) findViewById(R.id.btnshow);
         EditText myresult = (EditText) findViewById(R.id.result);
+
         show_btn.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v){
+
+                myresult.setText(mytext.getText().toString());
+
                 if (TextUtils.isEmpty(mytext.getText().toString())) {
-                    Toast.makeText(MainActivity.this, "Kindly Enter Text First", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "PLEASE Fill The Empty Spaces", Toast.LENGTH_SHORT).show();
                 }
-                myresult.setText(mytext.toString());
+
                 if (spfont.getSelectedItemPosition() == 0)
-                    myresult.setTypeface(Typeface.createFromAsset(getAssets(), "font/admiration_pains.ttf"));
+                    myresult.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/admiration_pains.ttf"));
                 else if (spfont.getSelectedItemPosition() == 1)
-                    myresult.setTypeface(Typeface.createFromAsset(getAssets(), "font/playfairdisplay_bold.ttf"));
+                    myresult.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/playfairdisplay_bold.ttf"));
                 else if (spfont.getSelectedItemPosition() == 2)
-                    myresult.setTypeface(Typeface.createFromAsset(getAssets(), "font/remachinescript_personal_use.ttf"));
+                    myresult.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/remachinescript_personal_use.ttf"));
                 else if (spfont.getSelectedItemPosition() == 3)
-                    myresult.setTypeface(Typeface.createFromAsset(getAssets(), "font/waltographui.ttf"));
+                    myresult.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/waltographui.ttf"));
                 else
                     Toast.makeText(MainActivity.this, "invalid option", Toast.LENGTH_SHORT).show();
+
                 if (spcolor.getSelectedItemPosition() == 0)
                     myresult.setTextColor(Color.BLACK);
                 else if(spcolor.getSelectedItemPosition() == 1)
@@ -60,10 +65,13 @@ public class MainActivity extends AppCompatActivity {
                 else
                     Toast.makeText(MainActivity.this, "invalid option", Toast.LENGTH_SHORT).show();
 
-                if(cbbold.isChecked()==true)
-                    myresult.setTypeface(null, Typeface.BOLD);
-                if(cbitalic.isChecked()==true)
-                    myresult.setTypeface(Typeface.defaultFromStyle(Typeface.ITALIC));
+                if(cbbold.isChecked() && cbitalic.isChecked())
+                    myresult.setTypeface(myresult.getTypeface(), Typeface.BOLD_ITALIC);
+                else if(cbitalic.isChecked())
+                    myresult.setTypeface(myresult.getTypeface(),Typeface.ITALIC);
+                else if(cbbold.isChecked())
+                    myresult.setTypeface(myresult.getTypeface(),Typeface.BOLD);
+
             }
         });
 
