@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/myimage">
 
     <EditText
         android:id="@+id/text"
@@ -17,6 +18,7 @@
         android:layout_marginEnd="9dp"
         android:layout_marginBottom="457dp"
         android:ems="10"
+        android:background="@color/white"
         android:hint="enter text here"
         android:textAlignment="center"
         android:textSize="20dp" />
@@ -31,6 +33,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="100dp"
         android:layout_marginEnd="92dp"
+        android:background="@color/white"
         android:layout_marginBottom="379dp"
         android:entries="@array/font"
         android:textAlignment="center"
@@ -42,11 +45,12 @@
         android:layout_height="46dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:entries="@array/color"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="98dp"
         android:layout_marginEnd="97dp"
+        android:background="@color/white"
         android:layout_marginBottom="298dp"
+        android:entries="@array/color"
         android:textAlignment="center"
         android:textSize="20dp" />
 
@@ -57,6 +61,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="221dp"
+        android:background="@color/white"
         android:layout_marginBottom="209dp"
         android:text="Bold"
         android:textSize="20dp" />
@@ -69,6 +74,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="78dp"
         android:layout_marginBottom="207dp"
+        android:background="@color/white"
         android:text="Italic"
         android:textSize="20dp" />
 
@@ -80,6 +86,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="29dp"
         android:layout_marginBottom="122dp"
+        android:background="@color/teal_200"
         android:text="Show formatted text"
         android:textAlignment="center"
         android:textSize="20dp" />
@@ -97,6 +104,6 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:textAlignment="center"
-        android:textSize="20dp" />
+        android:textSize="50dp" />
 
 </RelativeLayout>
